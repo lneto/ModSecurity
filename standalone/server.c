@@ -940,6 +940,9 @@ AP_DECLARE(void) unixd_pre_config(apr_pool_t *ptemp)
 {
     apr_finfo_t wrapper;
 
+#define DEFAULT_USER "zenedge"
+#define DEFAULT_GROUP "zenedge"
+
 #if AP_SERVER_MAJORVERSION_NUMBER > 1 && AP_SERVER_MINORVERSION_NUMBER < 3
     unixd_config.user_name = DEFAULT_USER;
     unixd_config.user_id = ap_uname2id(DEFAULT_USER);

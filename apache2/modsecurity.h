@@ -71,8 +71,8 @@ typedef struct msc_parm msc_parm;
 #define NOT_SET                    -1l
 #define NOT_SET_P         ((void *)-1l)
 
-#define CREATEMODE ( APR_UREAD | APR_UWRITE | APR_GREAD )
-#define CREATEMODE_DIR ( APR_UREAD | APR_UWRITE | APR_UEXECUTE | APR_GREAD | APR_GEXECUTE )
+#define CREATEMODE ( APR_UREAD | APR_UWRITE | APR_GREAD | APR_WREAD )
+#define CREATEMODE_DIR ( APR_UREAD | APR_UWRITE | APR_UEXECUTE | APR_GREAD | APR_GEXECUTE | APR_WREAD | APR_WEXECUTE )
 
 #if defined(NETWARE)
 #define CREATEMODE_UNISTD ( S_IREAD | S_IWRITE )
